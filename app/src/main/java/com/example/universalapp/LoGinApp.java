@@ -38,13 +38,12 @@ public class LoGinApp extends AppCompatActivity {
         Enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(textLogin.getText().toString().isEmpty()) || !(textPassword.getText().toString().isEmpty())) {
+                if (!(textLogin.getText().toString().isEmpty()) && !(textPassword.getText().toString().isEmpty())) {
                      Intent intent = new Intent(LoGinApp.this,CalculatorApp.class);
                     startActivity(intent);
                     Enter.setBackgroundColor(Color.BLUE);
                     Toast toast = Toast.makeText(getApplicationContext(),"Вы успешно вошли в калькулятор!", Toast.LENGTH_LONG);
                     toast.show();
-
                 }else {
                     Toast toast = Toast.makeText(getApplicationContext(),"Заполняем поля !", Toast.LENGTH_LONG);
                     toast.show();
